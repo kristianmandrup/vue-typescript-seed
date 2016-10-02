@@ -18,16 +18,18 @@ require('./main.scss'); //global css
 */
 import './components/navbar/navbar'
 
-import { HomeComponent } from './views/home/home'
-import { AboutComponent } from './views/about/about'
+import { HomeComponent as Home } from './views/home/home'
+import { AboutComponent as About } from './views/about/about'
+
+Vue.use(VueRouter);
 
 const routes = [
-  {path: '/', component: HomeComponent},
-  {path: '/about', component: AboutComponent}
+  {path: '/', component: Home},
+  {path: '/about', component: About}
 ];
 
 const router = new VueRouter({routes});
 
 const app = new Vue({
   router
-}).$mount('#app-main')
+}).$mount('#app-main');
