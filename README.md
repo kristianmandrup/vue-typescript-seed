@@ -1,14 +1,15 @@
 # vue-typescript-seed
-A starter project for [vue-typescript](https://github.com/itsFrank/vue-typescript) using webpack and bootstrap
+A starter project for [vue-typescript](https://github.com/itsFrank/vue-typescript) using webpack.
+
+**Now supports [Vue 2.0](https://vuejs.org/guide/)**
 
 This seed repo comes with all you need to start building a vuejs project using typescript.
 
 Packages included:
 - vue
 - vue-router
+- vuex
 - webpack (and all the loaders and utilities necessary)
-- bootstrap 3
-- jquery 2.2.4
 
 Scripts:
 
@@ -22,3 +23,10 @@ Setup: run `npm install`
 
 Clone it and get started!
 
+## Install Typings
+
+`typings install vue vue-router vuex --global --save`
+
+## TODO
+
+Add support for Stylus and PostCSS ;)

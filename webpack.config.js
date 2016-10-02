@@ -41,7 +41,7 @@ module.exports = {
 
     resolve: {
         // ensure loader extensions match
-        extensions: ['', '.ts', '.js', '.json', '.css', '.scss', '.sass', '.html'], // <-- include .scss
+        extensions: ['', '.ts', '.js', '.json', '.css', '.scss', '.sass', '.styl', '.html'],
         fallback: [path.join(__dirname, './node_modules')] //default to node_modules when not found
     },
     resolveLoader: {
@@ -67,15 +67,12 @@ module.exports = {
 
             // if you add a loader include the resolve file extension above
 
-            { test: /\.(scss|sass)$/, loaders: ['style', 'css', 'sass'] },
+            { test: /\.(scss|sass|styl)$/, loaders: ['style', 'css', 'sass', 'stylus'] },
 
-            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
-
-            // Bootstrap 4
-            { test: /bootstrap\/dist\/js\/umd\//, loader: 'imports?jQuery=jquery' }
+            { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=500000' }
         ]
     },
-    
+
     // sassResources: path.resolve(__dirname, "./node_modules/bootstrap/scss"),
 
     postcss: [autoprefixer], // <--- postcss
@@ -94,11 +91,8 @@ module.exports = {
             }
         }),
 
-        //Make jquery and Vue globally available without the need to import them
+        //Make Vue globally available without the need to import them
         new ProvidePlugin({
-            jQuery: 'jquery',
-            $: 'jquery',
-            jquery: 'jquery',
             Vue: 'vue'
         })
     ],

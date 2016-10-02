@@ -1,7 +1,10 @@
-import * as Vue from 'vue'
-import * as VueRouter from 'vue-router'
+import * as Vue from 'vue';
+import * as Vuex from 'vuex';
+import * as VueRouter from 'vue-router';
 
-import './vendor' //bootstrap
+import './vendor'; // f.ex bootstrap
+
+// alternatively use stylus
 require('./main.scss'); //global css
 
 /*
@@ -11,7 +14,7 @@ require('./main.scss'); //global css
   However, if you import the class (ex: import { Navbar } from './navbar'),
   you will have to call new Navbar() somewhere as well. You would want
   to do that if you are defining a components{} object in the @VueComponent
-  options parameter. 
+  options parameter.
 */
 import './components/navbar/navbar'
 

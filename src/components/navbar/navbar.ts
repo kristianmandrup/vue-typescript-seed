@@ -1,4 +1,4 @@
-import { VueComponent, Prop, Watch } from 'vue-typescript'
+import { VueComponent, Prop, Watch } from 'vue-typescript';
 
 //This is overkill but typescript is great! :)
 class Link {
