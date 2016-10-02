@@ -21,19 +21,13 @@ import './components/navbar/navbar'
 import { HomeComponent } from './views/home/home'
 import { AboutComponent } from './views/about/about'
 
-Vue.use(VueRouter);
+const routes = [
+  {path: '/', component: HomeComponent},
+  {path: '/about', component: AboutComponent}
+];
 
-var app = Vue.extend({});
+const router = new VueRouter({routes});
 
-var router = new VueRouter();
-
-router.map({
-  '/' : {
-      component: HomeComponent
-  },
-  '/about' : {
-      component: AboutComponent
-  }
-});
-
-router.start(app, '#app-main');
+const app = new Vue({
+  router
+}).$mount('#app-main')
