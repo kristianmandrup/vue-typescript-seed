@@ -23,10 +23,18 @@ Setup: run `npm install`
 
 Clone it and get started!
 
+PS: To check for Vue 2.x compatibility use the [migration CLI](https://github.com/vuejs/vue-migration-helper)
+
 ## Install Typings
 
-`typings install vue vue-router vuex --global --save`
+Use `dt~` to download typings from [definitely typed](https://github.com/DefinitelyTyped/DefinitelyTyped):
+
+`typings install dt~vue dt~vue-router --global --save`
+
+vuex typings:
+
+`typings install vuex=github:vuejs/vuex/types/index.d.ts#4a6dee4a83f49dcbb24043ae1a3f08a85eb1fd45 --save`
 
 ## TODO
 
-Add support for Stylus and PostCSS ;)
+Add support PostCSS ;)
